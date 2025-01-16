@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const useCounter = () => {
-  const [counter, setCounter] = useState(0);
+const useCounter = (initialValue: number) => {
+  const [counter, setCounter] = useState(initialValue);
 
   const increment = () => {
     setCounter(counter + 1);
@@ -12,7 +12,7 @@ const useCounter = () => {
   };
 
   const reset = () => {
-    setCounter(0);
+    setCounter(initialValue);
   };
 
   return {
