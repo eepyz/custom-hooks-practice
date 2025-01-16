@@ -2,24 +2,28 @@
 // import { ToggleSection } from "./components/ToggleSection";
 // import { WeatherSection } from "./components/WeatherSection";
 
-import { FeedbackForm } from "./components/FeedbackForm";
-import { RegistrationForm } from "./components/RegistrationForm";
-import useToggle from "./hooks/useToggle";
+// import { FeedbackForm } from "./components/FeedbackForm";
+// import { RegistrationForm } from "./components/RegistrationForm";
+// import useToggle from "./hooks/useToggle";
+
+import { ThemeToggleButton } from "./components/ThemeToggleButton";
+import { ThemeProvider } from "./context/useTheme";
 
 function App() {
-  const [isToggled, toggle] = useToggle();
+  // const [isToggled, toggle] = useToggle();
 
-  function renderForm() {
-    if (isToggled) return <FeedbackForm />;
-    return <RegistrationForm />;
-  }
+  // function renderForm() {
+  //   if (isToggled) return <FeedbackForm />;
+  //   return <RegistrationForm />;
+  // }
 
   return (
-    <div>
-      {/* <Counter /> */}
-      {/* <ToggleSection /> */}
-      {/* <WeatherSection /> */}
+    <ThemeProvider>
       <div>
+        {/* <Counter /> */}
+        {/* <ToggleSection /> */}
+        {/* <WeatherSection /> */}
+        {/* <div>
         <button
           onClick={() => {
             toggle();
@@ -27,8 +31,10 @@ function App() {
           Show {isToggled ? "Registration" : "Feedback"}
         </button>
         {renderForm()}
+      </div> */}
+        <ThemeToggleButton />
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 
