@@ -1,7 +1,7 @@
 import useToggle from "../hooks/useToggle";
 
 export function ToggleSection() {
-  const { isToggled, toggle } = useToggle();
+  const [isToggled, toggle] = useToggle();
 
   return (
     <div>
